@@ -1,0 +1,5 @@
+<%= Rabl::Renderer.json(
+  @nested_items,
+  'nested_items/show',
+  view_path: 'app/views/isolated_engine'
+) %>

@@ -1,0 +1,17 @@
+<%= form_for(@nested_item) do |f| %>
+  <% if @nested_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nested_item.errors.count, "error") %> prohibited this nested_item from being saved:</h2>
+
+      <ul>
+      <% @nested_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
